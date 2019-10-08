@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0C28BD7C2346BBF50023C3CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28BD7B2346BBF50023C3CE /* AppDelegate.swift */; };
-		0C28BD7E2346BBF50023C3CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28BD7D2346BBF50023C3CE /* ViewController.swift */; };
+		0C28BD7E2346BBF50023C3CE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28BD7D2346BBF50023C3CE /* HomeVC.swift */; };
 		0C28BD812346BBF50023C3CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C28BD7F2346BBF50023C3CE /* Main.storyboard */; };
 		0C28BD832346BBF60023C3CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C28BD822346BBF60023C3CE /* Assets.xcassets */; };
 		0C28BD862346BBF60023C3CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C28BD842346BBF60023C3CE /* LaunchScreen.storyboard */; };
 		0C28BD8F2346BC6E0023C3CE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C28BD8E2346BC6E0023C3CE /* GoogleMobileAds.framework */; };
+		0CB2EF2C234CBB9B00C91CF1 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2EF2B234CBB9B00C91CF1 /* PurchaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C28BD782346BBF50023C3CE /* brilliant-makeover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "brilliant-makeover.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C28BD7B2346BBF50023C3CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C28BD7D2346BBF50023C3CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C28BD7D2346BBF50023C3CE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0C28BD802346BBF50023C3CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C28BD822346BBF60023C3CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C28BD852346BBF60023C3CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C28BD872346BBF60023C3CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C28BD8E2346BC6E0023C3CE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../../Downloads/GoogleMobileAdsSdkiOS-7.50.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		0CB2EF2B234CBB9B00C91CF1 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 		0C28BD7A2346BBF50023C3CE /* brilliant-makeover */ = {
 			isa = PBXGroup;
 			children = (
+				0CB2EF2A234CBB8200C91CF1 /* Services */,
+				0CB2EF29234CBB3600C91CF1 /* Controller */,
 				0C28BD7B2346BBF50023C3CE /* AppDelegate.swift */,
-				0C28BD7D2346BBF50023C3CE /* ViewController.swift */,
 				0C28BD7F2346BBF50023C3CE /* Main.storyboard */,
 				0C28BD822346BBF60023C3CE /* Assets.xcassets */,
 				0C28BD842346BBF60023C3CE /* LaunchScreen.storyboard */,
@@ -74,6 +77,22 @@
 				0C28BD8E2346BC6E0023C3CE /* GoogleMobileAds.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CB2EF29234CBB3600C91CF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C28BD7D2346BBF50023C3CE /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CB2EF2A234CBB8200C91CF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0CB2EF2B234CBB9B00C91CF1 /* PurchaseManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C28BD7E2346BBF50023C3CE /* ViewController.swift in Sources */,
+				0C28BD7E2346BBF50023C3CE /* HomeVC.swift in Sources */,
+				0CB2EF2C234CBB9B00C91CF1 /* PurchaseManager.swift in Sources */,
 				0C28BD7C2346BBF50023C3CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
