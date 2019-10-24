@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="brilliant_makeover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5W-no-Li0">
-                                <rect key="frame" x="0.0" y="20" width="600" height="141"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="141"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGImage" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-Ji-Elq">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="141"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Ni-WPZ">
-                                        <rect key="frame" x="205" y="29" width="190.5" height="20.5"/>
+                                        <rect key="frame" x="92.5" y="29" width="190.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRILLIANT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEF-tF-anG">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
@@ -54,39 +54,42 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-Jw-mmi">
-                                <rect key="frame" x="0.0" y="161" width="600" height="138"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="Hcg-tZ-cuA"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="tWg-JE-v5H">
-                                <rect key="frame" x="0.0" y="299" width="600" height="138"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="lVh-LI-cmh"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="vFS-29-JYo">
-                                <rect key="frame" x="0.0" y="437" width="600" height="138"/>
+                                <rect key="frame" x="0.0" y="437" width="375" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="mSR-dn-CQj"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryA-oP-LbO">
-                                <rect key="frame" x="0.0" y="575" width="600" height="25"/>
+                                <rect key="frame" x="0.0" y="575" width="375" height="92"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIJ-3j-gtH" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="WSs-CC-edZ"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgh-gq-KJg">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="42"/>
                                         <color key="backgroundColor" red="0.27769635962091072" green="0.62815276015228427" blue="0.18455781447985009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="REMOVE ADS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="removeAdsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jj-gT-0yD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="RIJ-3j-gtH" id="bzV-EH-k4E"/>
+                        <outlet property="removeAdsBtn" destination="Xgh-gq-KJg" id="8ur-hg-f3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

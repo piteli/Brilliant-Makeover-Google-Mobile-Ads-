@@ -9,6 +9,8 @@
 import Foundation
 import StoreKit
 
+typealias CompletionHandler = (_ success : Bool) -> ()
+
 class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     static let instance = PurchaseManager()
@@ -17,6 +19,7 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
     
     var productsRequest: SKProductsRequest!
     var products = [SKProduct]()
+    var transactionComplete : CompletionHandler?
     
     func fetchProducts(){
         let productIds = NSSet(object: IAP_REMOVE_ADS) as! Set<String>
@@ -26,12 +29,15 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
         
     }
     
-    func purchaseRemoveAds(){
+    func purchaseRemoveAds(onComplete : @escaping CompletionHandler){
         if SKPaymentQueue.canMakePayments() && products.count > 0 {
+            transactionComplete = onComplete
             let removeAdsProduct = products[0]
             let payment = SKPayment(product: removeAdsProduct)
             SKPaymentQueue.default().add(self)
             SKPaymentQueue.default().add(payment)
+        }else{
+            onComplete(false);
         }
     }
     
@@ -50,15 +56,20 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
                 SKPaymentQueue.default().finishTransaction(transaction)
                 if transaction.payment.productIdentifier == IAP_REMOVE_ADS {
                     UserDefaults.standard.set(true, forKey: IAP_REMOVE_ADS)
+                    transactionComplete?(true)
                 }
                 break
             case .failed:
                 SKPaymentQueue.default().finishTransaction(transaction)
+                transactionComplete?(false)
                 break
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
+                transactionComplete?(true)
                 break
-            default: break
+            default:
+                transactionComplete?(false)
+                break
             }
         }
     }
