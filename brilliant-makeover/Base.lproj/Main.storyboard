@@ -41,15 +41,28 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSi-O5-r0n">
+                                        <rect key="frame" x="334" y="10" width="31" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="Bau-BR-tsp"/>
+                                            <constraint firstAttribute="width" constant="31" id="D4S-Hl-Qe5"/>
+                                        </constraints>
+                                        <state key="normal" image="restore"/>
+                                        <connections>
+                                            <action selector="restoreBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OtZ-Gu-Buc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="XSi-O5-r0n" firstAttribute="top" secondItem="Y5W-no-Li0" secondAttribute="top" constant="10" id="26R-Ld-tPM"/>
                                     <constraint firstItem="vS3-Ji-Elq" firstAttribute="top" secondItem="Y5W-no-Li0" secondAttribute="top" id="2Xv-AK-WiQ"/>
                                     <constraint firstAttribute="height" constant="141" id="DXK-sF-Kds"/>
                                     <constraint firstItem="vS3-Ji-Elq" firstAttribute="leading" secondItem="Y5W-no-Li0" secondAttribute="leading" id="Wyd-kt-drT"/>
                                     <constraint firstItem="Ryb-Ni-WPZ" firstAttribute="centerX" secondItem="Y5W-no-Li0" secondAttribute="centerX" id="fKH-5e-D2P"/>
                                     <constraint firstAttribute="trailing" secondItem="vS3-Ji-Elq" secondAttribute="trailing" id="l6E-Bs-ccR"/>
                                     <constraint firstItem="Ryb-Ni-WPZ" firstAttribute="top" secondItem="Y5W-no-Li0" secondAttribute="top" constant="29" id="lUf-7E-mpI"/>
+                                    <constraint firstAttribute="trailing" secondItem="XSi-O5-r0n" secondAttribute="trailing" constant="10" id="tkU-lw-vEf"/>
                                     <constraint firstAttribute="bottom" secondItem="vS3-Ji-Elq" secondAttribute="bottom" id="uam-t0-2RP"/>
                                 </constraints>
                             </view>
@@ -137,6 +150,7 @@
     </scenes>
     <resources>
         <image name="BGImage" width="475" height="300"/>
+        <image name="restore" width="31" height="27"/>
         <image name="videoThumbnail" width="375" height="250"/>
     </resources>
 </document>

@@ -16,7 +16,11 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupAds()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func setupAds(){
         if userDefaults.standard.bool(forKey : PurchaseManager.instance.IAP_REMOVE_ADS) == true {
             removeAdsBtn.removeFromSuperview()
             bannerView.removeFromSuperview()
@@ -25,7 +29,6 @@ class HomeVC: UIViewController {
             bannerView.rootViewController = self
             bannerView.load(GADRequest())
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func removeAdsPressed(_ sender: Any) {
@@ -41,5 +44,12 @@ class HomeVC: UIViewController {
         }
     }
     
+    @IBAction func restoreBtnPressed(_ sender: Any) {
+        PurchaseManager.instance.restorePurchases { (success) in
+            if success {
+                self.setupAds()
+            }
+        }
+    }
 }
 
